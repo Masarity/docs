@@ -176,7 +176,7 @@ if (!StructureSpawn.prototype._spawnCreep) {
         do {
             name = `c${Memory.creepNameCounter++}`;
             dryRun = this._spawnCreep(body, name, { ...opts, dryRun: true });
-        } while (dryRun !== ERR_NAME_EXISTS);
+        } while (dryRun == ERR_NAME_EXISTS);
         
         // Now we call the original function passing in our generated name and 
         // returning the value
